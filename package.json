@@ -1,0 +1,38 @@
+{
+    "name": "glow-lang",
+    "displayName": "Glow Lang",
+    "description": "Syntax highlighting for glow lang",
+    "version": "0.0.1",
+    "publisher": "Derek Colley",
+    "license":"MIT",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "glow",
+            "aliases": ["Glow Lang", "glow", "glow-lang"],
+            "extensions": [".glow"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [
+            {
+                "language": "glow",
+                "scopeName": "source.glow",
+                "path": "./syntaxes/glow.tmLanguage.json",
+                "embeddedLanguages":{
+                    "meta.tag.js":"javascript",
+                    "meta.tag.without-attributes.js":"javascript",
+                    "meta.tag.attributes.js":"javascript",
+                    "meta.embedded.expression.js":"javascript"
+                }
+            }
+        ]
+    },
+    "repository":{
+        "type":"git","url":"https://github.com/dcolley/vs-code-glow-lang.git"
+    }
+}
